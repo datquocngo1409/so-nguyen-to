@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function kiemTraNguyenTo(n) {
+      if (n==2) return true;
+      else if (n==3) return true;
+      for(var i=2;i<=Math.sqrt(n);i++){
+        if(n%i==0) return false;
+      }
+      return true;
+    }
+    var number=prompt("Nhập số: ",0);
+    var count=0;
+    for (var i=2;i<=number;i++){
+      if (kiemTraNguyenTo(i)) {
+        document.write(i + " ");
+        count++;
+      }
+    }
+    alert("Có "+count+" số nguyên tố!");
+  </script>
+</body>
+</html>
